@@ -1,0 +1,65 @@
+<html>
+  <meta http-equiv="Content-Type"content="text/html; charset=utf-8"/>
+	<meta http-equiv="pragma" content="no-cache"> 
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
+  <meta http-equiv="expires" content="0">
+ 
+	
+  <head>
+    <link href="/styles.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+	<h3 style=" text-align : center; " >
+	
+	<but style=" text-align : center;">
+	  <button style="color:#FF0F00;width:120px;height:60px;font-size:20pt;" onclick="location.href='javascript:history.go(-1)'">后退</button>&nbsp;&nbsp;&nbsp;
+	  <button style="color:#FF0F00;width:120px;height:60px;font-size:15pt;" onclick="location.href='http://free.3v.do/gbook/index.asp?username=hhcgn'">留言/建议</button>
+	&nbsp;&nbsp;  <button onclick="location.href='javascript:history.go(0)'">Refresh</button>
+	  
+	</but>
+	<iframe src="/data.html" frameBorder="20" width="100%"  scrolling="yes" height="120%">您的浏览器不支持</iframe>
+	<!--  <br><button style="color:#FF0F00;width:200px;height:60px;font-size:20pt" onclick="location.href='/return.html'">各大学官网</button>!-->
+</h3>
+	
+	<br><button style="color:#FF0F00;width:800px;height:60px;font-size:25pt" onclick="location.href='/return.html'">下一页</button>
+	<br><br><input style="text-align:center; color:#ffffff;background:#FF0F00;width:400px;height:50px;font-size:25pt;" 
+	  type="text" id="web"  value="网址直达"    onfocus="if(value=='网址直达')value=''" onblur="if(!value)value='网址直达'" name="keyword" >
+	  <button style="width:60px;height:40px ;font-size:25pt;text-align : center;"onclick=" gotoweb()";>
+	  GO</button>
+	
+	
+<script type="text/javascript">
+  function gotoweb(){
+  var src=document.getElementById("web");
+  if(src.value=="网址直达"){
+  alert("请输入要去的网址");
+  }else if(str.value=="phone"){
+  location.href="/phone.html";
+  }else{
+  location.href="http://"+src.value;
+  }
+  }
+   var Date=new Date();
+	var day=Date.getDay();
+  var hour=Date.getHours();
+  var min=Date.getMinutes();
+ var sec=Date.getSeconds();
+	function time(){//判断时间
+if(hour<7||hour==7&&min>=44&&min<55||hour==8&&min>34&&min<45||hour==8&&min>45||
+hour==9&&min<35||hour>=10&&hour<14&&min>20||hour==14&&min<40||hour==15&&min>0&&
+min<30||hour==16&&min>0&&min<20||hour==17||hour==18&&min<30||hour==19&&min<30||hour==20&&min<20||hour>=21){
+
+}else{
+location.href='/study.html';
+}}
+</script>
+
+
+	<h1 style=" text-align : center; ">
+	  powered by C
+
+	</h1>
+  </body>
+</html>		
