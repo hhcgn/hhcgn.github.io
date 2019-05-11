@@ -11,7 +11,7 @@
 </style>
   </head>
   <body style="text-align:center; ">
-<image src="/01.gif"><image>
+<image src="/06.gif"><image>
 <h2 id="tx";style="font-size:20pt;color:#2700fa;background:#fff;"> <h2>	
 <script type="text/javascript">
   var Date=new Date();
@@ -19,11 +19,11 @@ var  day=Date.getDay();
   var hour=Date.getHours();
    var min=Date.getMinutes();
  var   sec=Date.getSeconds();
-    setInterval("rfa()",1000);
-     
+    setTimeout("raf()",1000)
   function rfa(){
   document.getElementById("tx").innerHTML="现在是"+hour+"时"+min+"分"+sec+"秒"
-  }
+  setInterval("rfa()",1000);
+}
 </script>
   </body>
 </html>
