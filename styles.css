@@ -60,6 +60,12 @@ button{
   width:120px;
   height:60px;
   font-size:20pt;
+border-radius: 20px 5px;
+
+}
+input{
+border-radius: 20px;
+
 }
 p
 {
