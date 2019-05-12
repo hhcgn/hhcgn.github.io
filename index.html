@@ -20,19 +20,18 @@ animation: r2 4s linear  infinite;
   border-color: red #485EFF  orange #acffa5;
         animation: r1  5s linear infinite;
     }
- .box1:hover{
+ .likey:hover{
         animation-play-state: paused;
     }
 @keyframes r2{
 0%{
-scale(0.5)}
+transform:scale(0.5)}
 100%{
-scale(1.5)}
+transform:scale(1.5)}
 }
     @keyframes r1 {
-        0%{		transform: rotate(0) translateX(0) scale(1);    }
-       100%{
-          transform: rotate(720deg) translateX(0) scale(1); }  }
+        0%{	transform: rotate(0) translateX(0) scale(1);    }
+       100%{ transform: rotate(720deg) translateX(0) scale(1); }  }
 
 </style>
   </head>
