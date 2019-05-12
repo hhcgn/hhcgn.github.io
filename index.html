@@ -9,6 +9,10 @@ style="font-size:20pt;color:#2700fa;background:#fff;"
   <head>
     <link href='/styles.css' rel="stylesheet">
 <style type="text/css">
+.scale{
+animation: r2 4s linear  infinite;
+
+}
    .likey {
   width:0;
   height:0;
@@ -16,14 +20,26 @@ style="font-size:20pt;color:#2700fa;background:#fff;"
   border-color: red #485EFF  orange #acffa5;
         animation: r1  5s linear infinite;
     }
+ .box1:hover{
+        animation-play-state: paused;
+    }
+@keyframes r2{
+0%{
+scale(0.5)}
+100%{
+scale(1.5)}
+}
+    @keyframes r1 {
+        0%{		transform: rotate(0) translateX(0) scale(1);    }
+       100%{
+          transform: rotate(720deg) translateX(0) scale(1); }  }
 
 </style>
   </head>
   <body style="text-align:center; ">
 <div class="likey"></div>
-<image src="/"></image>
+<image src="/06.gif" class="scale"></image>
 <h2 id="tx";> <h2>	
-<br><br>
 <h2 style="font-size:20pt;color:#2700fa;background:#fff;">新页面正在制作中，敬请期待<h2>
 <script type="text/javascript">
   var Date=new Date();
