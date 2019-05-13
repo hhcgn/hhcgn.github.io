@@ -9,33 +9,123 @@ style="font-size:20pt;color:#2700fa;background:#fff;"
   <head>
     <link href='/styles.css' rel="stylesheet">
 <style type="text/css">
-.scale{
-animation: r2 4s linear  infinite;
-
-}
-   .likey {
+    .stage{
+        width: 840px;
+        height: 840px;
+        background-color: #acffa5;
+		text-align:center;
+    }
+	
+    .a1 {
   width:0;
   height:0;
-  border: 400px solid;
-  border-color: red #485EFF  orange #acffa5;
-        animation: r1  5s linear infinite;
+  border: 50px solid;
+  border-color: red;
+        animation: r1  4s linear infinite;
     }
- .likey:hover{
+	.ads{
+	    position:fixed;
+	    left:350px;
+	    top:300px;
+		border:50px solid;
+	    border-color:  blue;
+	    width:0;
+	    height:0;
+		
+	}
+
+	.a2{
+	    position:fixed;
+	    left:660px;
+	    top:300px;
+		border:50px solid;
+	    border-color:  red;
+	    width:0;
+	    height:0;
+		animation: r2  4s linear infinite;
+	}
+
+		.a3{
+	    position:fixed;
+	    left:350px;
+	    top:600px;
+		border:50px solid;
+	    border-color:  red;
+	    width:0;
+	    height:0;
+		animation: r3  4s linear infinite;
+	}
+		.a4{
+	    position:fixed;
+	    left:50px;
+	    top:300px;
+		border:50px solid;
+	    border-color:  red;
+	    width:0;
+	    height:0;
+		animation: r4  4s linear infinite;
+	}
+    .box1:hover{
         animation-play-state: paused;
     }
-@keyframes r2{
-0%{
-transform:scale(0.5)}
-100%{
-transform:scale(1.5)}
-}
     @keyframes r1 {
-        0%{	transform: rotate(0) translateX(0) scale(1);    }
-       100%{ transform: rotate(720deg) translateX(0) scale(1); }  }
+        0%{
+           
+			transform: rotate(0) translateX(0) scale(1)；
+			
+        }
+        100%{
+            transform: rotate(90deg) translate(300px , -40px)  scale(1);
+		
+			
+        }
+    }
+   @keyframes r2 {
+        0%{
+           
+			transform: rotate(90deg) translateX(0) scale(1)；
+			
+        }
+        100%{
+            transform: rotate(180deg) translate( 320px,-80px)  scale(1);
+		
+			
+        }
+    }
+    @keyframes r3 {
+        0%{
+           
+			transform: rotate(180deg) translateX(0) scale(1)；
+			
+        }
+        100%{
+            transform: rotate(270deg) translate(300px , -80px)  scale(1);
+		
+			
+        }
+    }
+	   @keyframes r4 {
+        0%{
+           
+			transform: rotate(270deg) translateX(0) scale(1)；
+			
+        }
+        100%{
+            transform: rotate(360deg) translate(300px , -40px)  scale(1);
+		
+			
+        }
+    }
+</style></head>
+  <body>
 
-</style>
-  </head>
-  <body style="text-align:center; ">
+	<div class="stage">
+	  <image class="a1" ></image>
+	  <div class="ads"></div>
+	  <div class="a2"> </div>
+	  <div class="a3"></div>
+	  <div class="a4"></div>
+	</div>
 <div class="likey"></div>
 <image src="/06.gif" class="scale"></image>
 <h2 id="tx";> <h2>	
