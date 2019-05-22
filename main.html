@@ -14,7 +14,7 @@
 	<!--<h3 style=" text-align : center; " >
 	
 	<but style=" text-align : center;">
-	  <button style="color:#FF0F00;width:120px;height:60px;font-size:20pt;" onclick="location.href='javascript:history.go(-1)'">后退</button>&nbsp;&nbsp;&nbsp;
+	  <button style="color:#FF0F00;width:120px;height:60px;font-size:20pt;" onclick="time()">后退</button>&nbsp;&nbsp;&nbsp;
 	  <button style="color:#FF0F00;width:120px;height:60px;font-size:15pt;" onclick="location.href='http://free.3v.do/gbook/index.asp?username=hhcgn'">留言/建议</button>
 	&nbsp;&nbsp;  <button onclick="location.href='javascript:history.go(0)'">Refresh</button>
 	  
@@ -50,8 +50,7 @@
 if(hour<7||hour==7&&min>=44&&min<55||hour==8&&min>34&&min<45||hour==8&&min>45||
 hour==9&&min<35||hour>=10&&hour<14&&min>20||hour==14&&min<40||hour==15&&min>0&&
 min<30||hour==16&&min>0&&min<20||hour==17||hour==18&&min<30||hour==19&&min<30||hour==20&&min<20||hour>=21){
-
-}else{
+location.href='javascript:history.go(-1)'}else{
 location.href='/study.html';
 }}
 </script>
