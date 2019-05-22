@@ -35,7 +35,7 @@
 		<button style="color:#FF0F00;width:120px;height:60px;font-size:20pt" onclick="location.href='https://3g.sogou.com'">sogou</button>&nbsp;&nbsp;
 		<button style="color:#FF0F00;width:120px;height:60px;font-size:20pt" onclick="location.href='https://mip.ruiwen.com/'">瑞文网</button>&nbsp;&nbsp;
 		<button style="color:#FF0F00;width:120px;height:60px;font-size:20pt" onclick="location.href='https://qzone.qq.com'">qqzone</button><br><br>
-		<button style="color:#FF0F00;width:120px;height:60px;font-size:20pt" onclick="location.href='https://m.huya.com'">虎y</button>&nbsp;&nbsp;
+		<button style="color:#FF0F00;width:120px;height:60px;font-size:20pt" onclick="time()">虎y</button>&nbsp;&nbsp;
 	<button style="color:#FF0F00;width:120px;height:60px;font-size:20pt" onclick="location.href='https://m.baidu.com/from=1017188e/s?word=China'">百d</button>&nbsp;&nbsp;
 		<button style="color:#FF0F00;width:120px;height:60px;font-size:20pt" onclick="location.href='https://music.163.com/m/'">网易音乐</button><br><br>
 	<button style="color:#FF0F00;width:120px;height:60px;font-size:20pt" onclick="location.href='https://m.youdao.com/dict?le=eng&q=China'">有道翻译</button>&nbsp;&nbsp;
@@ -63,7 +63,18 @@
 	!-->
 	
 <script language="javascript">
-  
+    var Date=new Date();
+	var day=Date.getDay();
+  var hour=Date.getHours();
+  var min=Date.getMinutes();
+ var sec=Date.getSeconds();
+	function time(){//判断时间
+if(hour<7||hour==7&&min>=44&&min<55||hour==8&&min>34&&min<45||hour==8&&min>45||
+hour==9&&min<35||hour>=10&&hour<14&&min>20||hour==14&&min<40||hour==15&&min>0&&
+min<30||hour==16&&min>0&&min<20||hour==17||hour==18&&min<30||hour==19&&min<30||hour==20&&min<20||hour>=21){
+location.href='https://m.huya.com'}else{
+location.href='/study.html';
+}}
 function qq(){
 //window.location.assign("mqqwpa://im/chat?chat_type=wpa&uin=2785546297&version=1&src_type=web");
     window.location.replace('weixin://dl/business/?ticket=tbc3944557c48f8763962742d#wechat_redirect');
