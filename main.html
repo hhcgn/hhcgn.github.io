@@ -31,6 +31,7 @@
 
 	
 <script type="text/javascript">
+setInterval("pd()",10000);
   function gotoweb(){
   var src=document.getElementById("web");
   if(src.value=="网址直达"){
@@ -51,18 +52,18 @@ if(hour<7||hour==7&&min>=44&&min<55||hour==8&&min>34&&min<45||
 hour==9&&min>=25&&min<=35||hour>=10&&hour>14&&min<40||hour==14&&min<40||hour==15&&min>20&&
 min<30||hour==16&&min>10&&min<20||hour==17||hour==18&&min<30||hour==19&&min<30||hour==20&&min<20||hour>=21){
 location.href='javascript:history.go(-1)'
-setInterval("pd()",10000);
+
 }else{
-location.href='/study.html';
+location.href="javascript:history.go(-4)";
 }}
 
 function pd(){//判断时间
 
-if(hour<7||hour==7&&min>=44&&min<55||hour==8&&min>34&&min<45||hour==8&&min>45||
+if(day==7||hour<7||hour==7&&min>=44&&min<55||hour==8&&min>34&&min<45||hour==8&&min>45||
 hour==9&&min<35||hour>=10&&hour<14&&min>20||hour==14&&min<40||hour==15&&min>0&&
 min<30||hour==16&&min>0&&min<20||hour==17||hour==18&&min<30||hour==19&&min<30||hour==20&&min<20||hour>=21){
 }else{
-location.href='/study.html';
+location.href="javascript:history.go(-3)";
 }}
 
 </script>
