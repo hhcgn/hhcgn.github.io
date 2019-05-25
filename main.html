@@ -19,7 +19,7 @@
 	&nbsp;&nbsp;  <button onclick="location.href='javascript:history.go(0)'">Refresh</button>
 	  
 	</but>
-	<iframe src="/data.html" frameBorder="20" width="100%"  scrolling="yes" height="120%">您的浏览器不支持</iframe>!-->
+	<iframe src="/data.html" frameBorder="20" width="100%"  scrolling="yes" height="120%">您的浏览器不支持</iframe>
 
 </h3>
 	
@@ -48,7 +48,7 @@ setInterval("pd()",10000);
   var min=Date.getMinutes();
  var sec=Date.getSeconds();
 	function time(){//判断时间
-if(hour<7||hour==7&&min>=44&&min<55||hour==8&&min>34&&min<45||
+if(day==7||hour<7||hour==7&&min>=44&&min<55||hour==8&&min>34&&min<45||
 hour==9&&min>=25&&min<=35||hour>=10&&hour>14&&min<40||hour==14&&min<40||hour==15&&min>20&&
 min<30||hour==16&&min>10&&min<20||hour==17||hour==18&&min<30||hour==19&&min<30||hour==20&&min<20||hour>=21){
 location.href='javascript:history.go(-1)'
