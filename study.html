@@ -13,10 +13,17 @@
   <br><br><button style="color:#FF0F00;width:140px;height:60px;font-size:20pt" onclick="location.href='https://m.youdao.com/dict?le=eng&q=China'">有道翻译</button>
   <br><br><button style="color:#FF0F00;width:140px;height:60px;font-size:20pt" onclick="location.href='https://mchengyu.911cha.com/'">成语</button>
  <br><br> <button style="color:#FF0F00;width:140px;height:60px;font-size:20pt" onclick="location.href='/timetable.gif'">课程表</button>
- <br><br> <button  style="color:#FF0F00;width:140px;height:60px;font-size:20pt" onclick="location.href='/main.html'">刷新</button>
+ <br><br> <button  style="color:#FF0F00;width:140px;height:60px;font-size:20pt" onclick="rfa()">刷新</button>
 	<br><br>  <p id="xs">倒计时</p>
 	  <p id="cf"></p>
   <script type="text/javascript">
+
+var m0=15,m00=60,m1=10,m11=49,m2=60,m22=39,m3=50,m33=29;
+ var s0=15,s00=44, s1=55,s11=34,s2=45,s22=24,s3=35,s33=14,s4=40,s44=20,sh=11;
+ var xh=14,x1=40,x11=20,x2=30,x22=10,x3=20,x33=60,xlh=17;
+ var wh=18,w0=25,w00=19,w1=30,w11=10,w2=20,ww2=60,wlh=21;
+  var honor,x,time;
+   var take=true;
 	var Date=new Date();
 	var day=Date.getDay();
   var hour=Date.getHours();
@@ -25,6 +32,37 @@
  var a=0;
  var f=0;
  var c=2;
+
+function rfa(){
+  
+  if(day==1){
+  if(hour<=7||hour==8&&min<m1||hour==8&&min>m11||hour==9&&min>=m22||hour==9&&min<m3||hour==10&&min>=m33||hour==10&&min<s4||hour>=11 //周一上午
+  &&hour<14||hour==14&&min<x1||hour==15&&min>=x11&&min<x2||hour==16&&min>=x22&&min<x3||hour==17//下午
+  ||hour==18&&min<w0||hour==19&&min>=w00&&min<w1||hour==20&&min>=w11||hour>20
+  ){
+  location.href='/main.html';
+  }
+  else{
+location.href='/study.html';}
+  
+  }
+ else if(day==2||day==3||day==4||day==5||day==6||day==7){
+ if(hour<7||hour==7&&min<s1||hour==8&&min>s11||hour==9&&min>=s22||hour==9&&min<s3||hour==10&&min>=s33&&min<s4||hour>=11 //周一上午
+ &&hour<14||hour==14&&min<x1||hour==15&&min>=x11&&min<x2||hour==16&&min>=x22&&min<x3||hour==17//下午
+ ||hour==18&&min<w0||hour==19&&min>=w00&&min<w1||hour==20&&min>=w11||hour>20
+ ){
+ location.href='/main.html';
+ }
+ else{location.href='/study.html';}
+ 
+ }
+  
+ else{
+  alert("other");
+  }
+  
+  //setInterval("rfa()",1000);
+}
 	function time(){//判断时间
 
 document.getElementById("xs").innerHTML="更改中，最近两天可能无法使用！！！！！";
