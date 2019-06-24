@@ -53,7 +53,7 @@ var  day=Date.getDay();
 }
 function error(){
 document.getElementById("er").innerHTML="ERROR,即将退出";
-location.href='javascript:history.go(-1)';
+setTimeout("location.href='javascript:history.go(-1)'",5000);
 }
 function out(){
 if(hour<10){//只有上午10点之前时间不同
@@ -161,7 +161,7 @@ function over(type){
 if(type!=null){
 time=type;
 if(type==0){
-location.href='javascript:history.go(-1)';
+error();
 }
 }else{
 if(time>0){
