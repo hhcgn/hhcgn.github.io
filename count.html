@@ -55,7 +55,7 @@ var  day=Date.getDay();
 
 function error(){
 document.getElementById("er").innerHTML="ERROR,即将退出0001";
-location.replace(this.href);event.returnValue=false; 
+location.href = document.referrer;
 }
 
 
