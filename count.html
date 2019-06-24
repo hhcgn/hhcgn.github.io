@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html  >
+  <meta http-equiv="Content-Type"content="text/html; charset=utf-8"/>
+  <meta http-equiv="refresh" content="30">
+<body>
+  <h1 id="tx" style="font-size:20pt;color:blue;background:#fff; text-align:center;  "> </h1>
+<h2 id="er"style="font-size:20pt;color:blue;background:#fff;">错误输出</h2>
+<script type="text/javascript">
+ 
+  var m0=15,m00=60,m1=10,m11=49,m2=60,m22=39,m3=50,m33=29;
+ var s0=15,s00=44, s1=55,s11=34,s2=45,s22=24,s3=35,s33=14,s4=40,s44=20,sh=11;
+ var xh=14,x1=40,x11=20,x2=30,x22=10,x3=20,x33=60,xlh=17;
+ var wh=18,w0=25,w00=19,w1=30,w11=10,w2=20,ww2=60,wlh=21;
+  var honor,x,time;
+   var take=true;
+ 
+ var Date=new Date();
+var  day=Date.getDay();
+  var hour=Date.getHours();
+   var min=Date.getMinutes();
+     
+  
+    setTimeout("out()",1000);
+	 
+  function rfa(){
+  
+  if(day==1){
+  if(hour<=7||hour==8&&min<m1||hour==8&&min>m11||hour==9&&min>=m22||hour==9&&min<m3||hour==10&&min>=m33||hour==10&&min<s4||hour>=11 //周一上午
+  &&hour<14||hour==14&&min<x1||hour==15&&min>=x11&&min<x2||hour==16&&min>=x22&&min<x3||hour==17//下午
+  ||hour==18&&min<w0||hour==19&&min>=w00&&min<w1||hour==20&&min>=w11||hour>20
+  ){
+  out();
+  }
+  else{error();}
+  
+  }
+ else if(day==2||day==3||day==4||day==5||day==6||day==7){
+ if(hour<7||hour==7&&min<s1||hour==8&&min>s11||hour==9&&min>=s22||hour==9&&min<s3||hour==10&&min>=s33&&min<s4||hour>=11 //周一上午
+ &&hour<14||hour==14&&min<x1||hour==15&&min>=x11&&min<x2||hour==16&&min>=x22&&min<x3||hour==17//下午
+ ||hour==18&&min<w0||hour==19&&min>=w00&&min<w1||hour==20&&min>=w11||hour>20
+ ){
+ out();
+ }
+ else{error();}
+ 
+ }
+  
+ else{
+  error();
+  }
+  
+  //setInterval("rfa()",1000);
+}
+function error(){
+document.getElementById("er").innerHTML="ERROR,即将退出";
+location.href='javascript:history.go(-1)';
+}
+function out(){
+if(hour<10){//只有上午10点之前时间不同
+if(day==1){
+if(hour==8){
+if(min<m1){
+honor=m1-min;
+x=honor*60;
+over(x);
+setInterval("over()",1000);
+//over(x);
+
+}else if(min<m2&&min>=m11){
+honor=m2-min;
+x=honor*60;
+
+over(x);
+setInterval("over()",1000);
+}else{
+error();
+}
+
+}
+ else if(hour==9){
+   if(min<m3){
+   honor=m3-min;
+   x=honor*60;
+   over(x);
+   setInterval("over()",1000);
+//document.getElementById("tx").innerHTML="现在是"+x;
+
+   }
+}
+}//分界线
+else if(day==2||day==3||day==4||day==5){
+if(hour==8){
+if(min<s2){
+honor=s2-min;
+x=honor*60;
+//alert(x);
+over(x);
+   setInterval("over()",1000);
+}
+}
+else if(hour==9){
+if(min<s3&&min>s22){
+honor=s3-min;
+x=honor*60;
+//alert(x);
+over(x);
+   setInterval("over()",1000);
+}
+}
+}
+
+
+
+else if(day==6||day==7){
+//alert("7");
+}
+
+
+
+
+
+}
+else if(hour==10)  {
+if(min<s4){
+honor=s4-min;
+x=honor*60;
+over(x);
+   setInterval("over()",1000);
+}
+
+}//10点之后都相同
+//下午
+else if(hour==14){
+if(min<x1){
+honor=x1-min;
+x=honor*60;
+over(x);
+   setInterval("over()",1000);
+}else{error();}
+}
+else if(hour==15){
+if(min<x2&&min>=x11){
+honor=x2-min;
+x=honor*60;
+over(x);
+   setInterval("over()",1000);
+}else{error();}
+}
+else if(hour==16){
+if(min<x3&&min>=0){
+honor=x3-min;
+x=honor*60;
+over(x);
+   setInterval("over()",1000);
+}else {
+error();
+}
+}
+}
+function over(type){
+if(type!=null){
+time=type;
+if(type==0){
+location.href='javascript:history.go(-1)';
+}
+}else{
+if(time>0){
+time=time-1;
+document.getElementById("tx").innerHTML="倒计时"+time+"s";
+if(time==0||time<0){
+location.href='/study.html';
+}
+
+
+}}
+
+}
+
+</script>
+</body>
+</html>
