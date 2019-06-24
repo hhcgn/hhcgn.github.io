@@ -51,10 +51,14 @@ var  day=Date.getDay();
   
   //setInterval("rfa()",1000);
 }
+
+
 function error(){
 document.getElementById("er").innerHTML="ERROR,即将退出";
-location.href='javascript:history.go(-2)'
+location.href='javascript:history.back(-5)';
 }
+
+
 function out(){
 if(hour<10){//只有上午10点之前时间不同
 if(day==1){
@@ -89,14 +93,22 @@ error();
 }
 }//分界线
 else if(day==2||day==3||day==4||day==5){
-if(hour==8){
+if(hour==7){
+if(min>s0&&min<s1){
+honor=s1-min;
+x=honor*60;
+ over(x);  setInterval("over()",1000);
+}else{error();}
+
+}
+else if(hour==8){
 if(min<s2){
 honor=s2-min;
 x=honor*60;
 //alert(x);
 over(x);
    setInterval("over()",1000);
-}
+} else{error();}
 }
 else if(hour==9){
 if(min<s3&&min>s22){
@@ -105,7 +117,7 @@ x=honor*60;
 //alert(x);
 over(x);
    setInterval("over()",1000);
-}
+}else{error();}
 }
 }
 
@@ -126,7 +138,7 @@ honor=s4-min;
 x=honor*60;
 over(x);
    setInterval("over()",1000);
-}
+}else{error();}
 
 }//10点之后都相同
 //下午
@@ -154,9 +166,8 @@ over(x);
    setInterval("over()",1000);
 }else {
 error();
-}
-}
-}
+}}}
+
 function over(type){
 if(type!=null){
 time=type;
@@ -167,9 +178,6 @@ error();
 if(time>0){
 time=time-1;
 document.getElementById("tx").innerHTML="倒计时"+time+"s";
-if(time==0||time<0){
-location.href='/study.html';
-}
 
 
 }}
