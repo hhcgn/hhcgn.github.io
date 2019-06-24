@@ -12,8 +12,7 @@
   <body style="color:#000000;text-align:center">
 
 	<h3 style=" text-align : center; " >
-	  <h1 id="tx" style="font-size:20pt;color:blue;background:#fff; text-align:center;  "> </h1>
-<h2 id="er"style="font-size:20pt;color:blue;background:#fff;">暂无错误输出</h2>
+	<iframe src="/count.html" frameBorder="20" width="100%"  scrolling="no" height="100px">您的浏览器不支持</iframe>
 	<but style=" text-align : center;">
    <button style="color:#FF0F00;width:160px;height:60px;font-size:20pt;" onclick="location.href='/code.html'">闪退源码</button>&nbsp;
 	  <button style="color:#FF0F00;width:120px;height:60px;font-size:20pt;" onclick="location.href='javascript:history.go(-1)'">后退</button>&nbsp;&nbsp;&nbsp;
@@ -97,8 +96,8 @@ var  day=Date.getDay();
 
 
 function error(){
-document.getElementById("er").innerHTML="ERROR,即将退出0001";
-setTimeout("location.href='/study.html'",3000);
+//document.getElementById("er").innerHTML="ERROR,即将退出0001";
+location.href='/study.html';
 }
 
 
