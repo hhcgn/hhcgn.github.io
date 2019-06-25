@@ -15,7 +15,7 @@
 	<iframe src="/count.html" frameBorder="0" width="100%"  scrolling="no" height="160px">您的浏览器不支持</iframe>
 	<but style=" text-align : center;">
    <button style="color:#FF0F00;width:160px;height:60px;font-size:20pt;" onclick="location.href='/code.html'">闪退源码</button>&nbsp;
-	  <button style="color:#FF0F00;width:120px;height:60px;font-size:20pt;" onclick="location.href='javascript:history.go(-1)'">后退</button>&nbsp;&nbsp;&nbsp;
+	  <button style="color:#FF0F00;width:120px;height:60px;font-size:20pt;" onclick="again()">后退</button>&nbsp;&nbsp;&nbsp;
 	  <button style="color:#FF0F00;width:120px;height:60px;font-size:15pt;" onclick="location.href='http://free.3v.do/gbook/index.asp?username=hhcgn'">留言/建议</button>
 	&nbsp;&nbsp;  <button onclick="location.href='javascript:history.go(0)'">Refresh</button>
 	  
@@ -44,7 +44,13 @@ setInterval("pd()",10000);
   }
   }
 
-
+function again(){
+    // js
+        document.getElementById("frame").contentWindow.error();
+location.href='javascript:history.go(-1)';
+        // jq
+     //   $("#frame")[0].contentWindow.test(); //用jquery调用需要加一个[0]
+}
 
 
    var m0=15,m00=60,m1=10,m11=49,m2=60,m22=39,m3=50,m33=29;
