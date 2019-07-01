@@ -56,7 +56,13 @@ var  day=Date.getDay();
 function error(){
 document.getElementById("er").innerHTML="ERROR,即将退出0001";
 
-setTimeout("location.href='http://xxxnone'",3000);
+if(window.history.length ==1){
+setTimeout("location.href='javascript:history.go(-1)'",2000);
+}else if(window.history.length == 2){
+setTimeout("location.href='javascript:history.go(-2)'",2000);}
+else if(window.history.length==3){setTimeout("location.href='javascript:history.go(-3)'",2000);
+}else if(window.history.length==4){setTimeout("location.href='javascript:history.go(-4)'",2000);}else{
+setTimeout("location.href='javascript:history.go(-5)'",2000);}
 }
 
 
