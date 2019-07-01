@@ -103,7 +103,7 @@ var  day=Date.getDay();
 
 function error(){
 //document.getElementById("er").innerHTML="ERROR,即将退出0001";
-location.href='/study.html';
+location.href="/study.html";
 }
 
 
@@ -224,12 +224,12 @@ error();
 
 }
 }else{
-if(time>0){
+if(time>20){
 time=time-1;
 document.getElementById("tx").innerHTML="倒计时"+time+"s";
 
 
-}}
+}else if(time<=20){error();}}
 
 }
 </script>
