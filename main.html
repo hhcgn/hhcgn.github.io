@@ -37,10 +37,13 @@ setInterval("pd()",10000);
   var src=document.getElementById("web");
   if(src.value=="网址直达"){
   alert("请输入要去的网址");
-  }else if(str.value=="phone"){
+  }else if(src.value=="phone"){
   location.href="/phone.html";
-  }else{
-  location.href="http://"+str.value;
+  }else if(src.value=="study"){
+  location.href="/all1.html"
+  }
+	  else{
+  location.href="http://"+src.value;
   }
   }
 
@@ -219,17 +222,16 @@ error();
 function over(type){
 if(type!=null){
 time=type;
-if(type==1){
-error();
-
-}
 }else{
-if(time>20){
+if(time>-10){
 time=time-1;
 document.getElementById("tx").innerHTML="倒计时"+time+"s";
 
 
-}else if(time<=20){error();}}
+}else {
+	time=time-1;
+      if(time<120){ error(); }
+      }}
 
 }
 </script>
