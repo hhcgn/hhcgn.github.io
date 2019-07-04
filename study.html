@@ -51,7 +51,7 @@ location.href='/study.html';}
  else if(day==2||day==3||day==4||day==5||day==6||day==7){
  if(hour<7||hour==7&&min<s1||hour==8&&min>s11||hour==9&&min>=s22||hour==9&&min<s3||hour==10&&min>=s33&&min<s4||hour>=11 //周一上午
  &&hour<14||hour==14&&min<x1||hour==15&&min>=x11&&min<x2||hour==16&&min>=x22&&min<x3||hour==17//下午
- ||hour==18&&min<w0||hour==19&&min>=w00&&min<w1||hour==20&&min>=w11||hour>20
+ ||hour==18&&min<w0||hour==19&&min>=w00&&min<w1||hour==20||hour>20
  ){
  location.href='/main.html';
  }
