@@ -44,6 +44,7 @@ function rfa(){
   ){
   location.href='/main.html';
   }
+
   else{
 location.href='/study.html';}
   
@@ -54,7 +55,9 @@ location.href='/study.html';}
  ||hour==18&&min<w0||hour==19&&min>=w00&&min<w1||hour==20||hour>20
  ){
  location.href='/main.html';
- }
+ }else if(day==5&&hour==16){
+location.href="/main.html";
+}
  else{location.href='/study.html';}
  
  }
