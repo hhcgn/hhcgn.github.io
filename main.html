@@ -77,7 +77,7 @@ var  day=Date.getDay();
 	 
   function rfa(){
   
-  if(day==1){
+ /* if(day==1){
   if(hour<=7||hour==8&&min<m1||hour==8&&min>m11||hour==9&&min>=m22||hour==9&&min<m3||hour==10&&min>=m33||hour==10&&min<s4||hour>=11 //周一上午
   &&hour<14||hour==14&&min<x1||hour==15&&min>=x11&&min<x2||hour==16&&min>=x22&&min<x3||hour==17//下午
   ||hour==18&&min<w0||hour==19&&min>=w00&&min<w1||hour==20&&min>=w11||hour>20
@@ -100,7 +100,7 @@ var  day=Date.getDay();
   
  else{
   alert("other");
-  }
+  }*/
   
   //setInterval("rfa()",1000);
 }
@@ -115,6 +115,8 @@ location.href="/study.html";
 
 
 function out(){
+if(hour>21&&hour<23){
+
 if(hour<10){//只有上午10点之前时间不同
 if(day==1){
 if(hour==8){
@@ -221,7 +223,11 @@ over(x);
    setInterval("over()",1000);
 }else {
 error();
-}}}
+}}}else{
+location.href="hhcgn.3vfree.net/00.html";
+}
+
+}
 
 function over(type){
 if(type!=null){
