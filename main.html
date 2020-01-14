@@ -9,10 +9,10 @@
     <link href="/styles.css" rel="stylesheet">
 
   </head>
-  <body style="color:#000000;text-align:center">
+  <body style="color:#fff;text-align:center">
 
 	<h3 style=" text-align : center; " >
-	<iframe id="frame" src="/count.html" frameBorder="0" width="100%"  scrolling="no" height="160px">您的浏览器不支持</iframe>
+	<iframe id="frame" src="/t.html" frameBorder="0" width="100%"  scrolling="no" height="160px">您的浏览器不支持</iframe>
 	<but style=" text-align : center;">
    <button style="color:#FF0F00;width:160px;height:60px;font-size:20pt;" onclick="location.href='/code.html'">闪退源码</button>&nbsp;
 	  <button style="color:#FF0F00;width:120px;height:60px;font-size:20pt;" onclick="again()">后退</button>&nbsp;&nbsp;&nbsp;
@@ -53,8 +53,8 @@ location.href="mqqwpa://im/chat?chat_type=wpa&uin=2452511672";
 
 function again(){
     // js
-        document.getElementById("frame").contentWindow.out();
-location.href='javascript:history.go(-1)';
+      //  document.getElementById("frame").contentWindow.out();
+//location.href='javascript:history.go(-1)';
         // jq
      //   $("#frame")[0].contentWindow.test(); //用jquery调用需要加一个[0]
 }
