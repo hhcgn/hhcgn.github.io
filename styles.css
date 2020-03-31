@@ -5,8 +5,8 @@ color:#ff0f00;
 text-align : center;
 }
 a{
-  font-size: 10pt;
-  color:#18FF00;
+  font-size: 15pt;
+  color:#000;
 }
 li{
   color:#ffffff;
@@ -15,7 +15,7 @@ h1{
   font-size:20pt;
   color:#2700fa;
   
-  background-color:#fff;
+  background-color:#000;
   text-align : center ;
 }
 content{
